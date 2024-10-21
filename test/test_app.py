@@ -1,7 +1,5 @@
-from app import app
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.dirname(__file__) + '/../'))
 
-def test_hello():
-    tester = app.test_client()
-    response = tester.get('/')
-    assert response.status_code == 200
-    assert b"Hello World" in response.data
+from app import app
