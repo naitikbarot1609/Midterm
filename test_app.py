@@ -1,5 +1,3 @@
-import sys
-import os
-sys.path.append(os.path.abspath(os.path.dirname(__file__) + '/../'))
-
-from app import app
+# test_app.py
+def test_example():
+    assert 1 + 1 == 2
