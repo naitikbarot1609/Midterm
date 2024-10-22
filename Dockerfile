@@ -4,11 +4,15 @@ FROM python:3.10-slim
 # Set the working directory in the container
 WORKDIR /app
 
+# Install system dependencies required by mysqlclient
+RUN apt-get update && apt-get install -y \
+    default-libmysqlclient-dev build-essential
+
 # Copy the current directory contents into the container at /app
 COPY . /app
 
 # Install any necessary dependencies
-RUN pip install --no-cache-dir -r
+RUN pip install flask
 
 # Expose port 5000 for Flask to run on
 EXPOSE 5000
