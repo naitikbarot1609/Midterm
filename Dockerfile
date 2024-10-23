@@ -12,7 +12,7 @@ RUN apt-get update && apt-get install -y \
 COPY . /app
 
 # Install any necessary dependencies
-RUN pip install flask
+RUN pip install -r flask
 
 # Expose port 5000 for Flask to run on
 EXPOSE 5000

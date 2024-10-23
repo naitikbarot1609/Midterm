@@ -37,7 +37,7 @@ jobs:
           source venv/bin/activate
           pytest
 
-      # Step 5: Log in to Docker Hub (replace DOCKER_USERNAME and DOCKER_PASSWORD with secrets)
+      # Step 5: Log in to Docker Hub 
       - name: Log in to Docker Hub
         uses: docker/login-action@v2
         with:
